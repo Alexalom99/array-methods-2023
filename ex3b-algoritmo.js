@@ -9,8 +9,15 @@
  */
 
 function countWins(winnerList, country) {
-    // your awesome code here
+    let count = 0;
+    winnerList.forEach((winner) => {
+        if (winner.country == country) {
+            count++;
+        }
+    })
+    return count;
 }
+
 
 const winnerList1 = [
     { season: '1996-97', team: 'Borussia Dortmund', country: 'Germany' },
@@ -34,6 +41,8 @@ const winnerList1 = [
     { season: '2014-15', team: 'Barcelona', country: 'Spain' },
     { season: '2015-16', team: 'Real Madrid', country: 'Spain' }
 ];
+
+
 
 // Caso de prueba 1: Comprobar cuántas veces ha ganado España
 const result1 = countWins(winnerList1, 'Spain');
